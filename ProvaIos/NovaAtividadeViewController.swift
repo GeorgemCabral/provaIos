@@ -45,14 +45,9 @@ class NovaAtividadeViewController: UIViewController {
             if self.atividade == nil {
                 self.atividade = Atividade(nome: self.nomeTextView.text,  prioridade:self.prioridadeSegmentedControl.selectedSegmentIndex, concluida: self.concluidoSwitch.isOn, ref: nil)
             }
-            let nome:String = nomeTextView.text!
-            let prioridade:Int = prioridadeSegmentedControl.selectedSegmentIndex
-            let concluido:Bool = concluidoSwitch.isOn
-            
-            let novaAtividade = Atividade(nome: nome, prioridade: prioridade, concluida: concluido, ref: nil)
-            self.ref.child("atividades").childByAutoId().setValue(novaAtividade.toAnyObject())
-            self.performSegue(withIdentifier: "CRIADO", sender: self)
-            
+            self.nomeTextView.text = nomeTextView.text!
+            self.prioridadeSegmentedControl.selectedSegmentIndex = prioridadeSegmentedControl.selectedSegmentIndex
+            self.concluidoSwitch.isOn = concluidoSwitch.isOn
         }
     }
     
