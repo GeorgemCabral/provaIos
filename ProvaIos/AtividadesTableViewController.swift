@@ -91,16 +91,16 @@ class AtividadesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Celula", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CELULA", for: indexPath) as! AtividadeTableViewCell
         
-        let atividade = atividades[indexPath.row]
+        let atividade = self.atividades[indexPath.row]
         
-        cell.textLabel?.text = atividade.nome
+        cell.nomeAtividade.text = atividade.nome!
         
         if(atividade.concluida){
-            cell.detailTextLabel?.text = "Concluída"
+            cell.subtituloAtividade?.text = "Concluída"
         }else{
-            cell.detailTextLabel?.text = "Não Concluída"
+            cell.subtituloAtividade?.text = "Não Concluída"
         }
         
         switch atividade.prioridade {

@@ -17,6 +17,7 @@
 		5E95FEAE21C3140A002C7B33 /* NovaAtividadeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E95FEAD21C3140A002C7B33 /* NovaAtividadeViewController.swift */; };
 		5E95FEB421C31D72002C7B33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E95FEB321C31D72002C7B33 /* Main.storyboard */; };
 		83FCEC928174DAF7A9B4CE40 /* Pods_ProvaIos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DC8DFC43DB3524E772E8BD8 /* Pods_ProvaIos.framework */; };
+		E312983C21CAD00F003CD145 /* AtividadeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E312983B21CAD00F003CD145 /* AtividadeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		5E95FEAD21C3140A002C7B33 /* NovaAtividadeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaAtividadeViewController.swift; sourceTree = "<group>"; };
 		5E95FEB321C31D72002C7B33 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9DC8DFC43DB3524E772E8BD8 /* Pods_ProvaIos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProvaIos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E312983B21CAD00F003CD145 /* AtividadeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtividadeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				5E95FEA921C312D5002C7B33 /* Atividade.swift */,
 				5E95FEAB21C31349002C7B33 /* AtividadesTableViewController.swift */,
 				5E95FEAD21C3140A002C7B33 /* NovaAtividadeViewController.swift */,
+				E312983B21CAD00F003CD145 /* AtividadeTableViewCell.swift */,
 				5E3481FF21C1D6970062A528 /* Info.plist */,
 				5E34820521C1D7D90062A528 /* GoogleService-Info.plist */,
 			);
@@ -232,6 +235,7 @@
 				5E3481F621C1D6950062A528 /* ViewController.swift in Sources */,
 				5E3481F421C1D6950062A528 /* AppDelegate.swift in Sources */,
 				5E95FEAC21C31349002C7B33 /* AtividadesTableViewController.swift in Sources */,
+				E312983C21CAD00F003CD145 /* AtividadeTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
