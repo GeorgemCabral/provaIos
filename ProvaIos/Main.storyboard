@@ -139,7 +139,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="iWE-Wm-7VT">
                             <connections>
-                                <segue destination="7fj-Bj-NtP" kind="show" identifier="criado" id="275-7o-Iwf"/>
+                                <segue destination="7fj-Bj-NtP" kind="show" identifier="CRIADO" id="275-7o-Iwf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -194,7 +194,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Criar Nova"/>
                                 <connections>
-                                    <action selector="criarButtonClicked:" destination="7fj-Bj-NtP" eventType="touchUpInside" id="lSC-6N-Ej7"/>
+                                    <segue destination="a2S-ru-0G7" kind="unwind" identifier="CRIADO" unwindAction="unwindAtividadesWithSegue:" id="krl-Bv-8Vn"/>
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Cpe-5w-sPc">
@@ -214,7 +214,6 @@
                         <outlet property="concluidoSwitch" destination="boh-nC-mXG" id="2FX-OE-LFC"/>
                         <outlet property="nomeTextView" destination="Ljg-7W-uEC" id="ng2-RH-jN9"/>
                         <outlet property="prioridadeSegmentedControl" destination="Cpe-5w-sPc" id="q3R-1Z-fKE"/>
-                        <segue destination="a2S-ru-0G7" kind="unwind" identifier="CRIADO" unwindAction="unwindNovoWithSegue:" id="cCH-tX-o7W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KXH-Ek-EiN" userLabel="First Responder" sceneMemberID="firstResponder"/>

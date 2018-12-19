@@ -36,6 +36,43 @@ class AtividadesTableViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         })
+        
+        self.ref.child("atividades").observe(.childAdded, with: { (snapshot) in
+            let value = snapshot.value as! [String: Any]
+            let newItem = Atividade(nome: value["nome"] as? String, prioridade: value["prioridade"] as? Int, concluida: value["concluida"] as! Bool, ref:snapshot.ref)
+            self.atividades.append(newItem)
+            
+            let indexPath = IndexPath(row: self.atividades.count - 1, section: 0)
+            self.tableView.insertRows(at: [indexPath], with: .fade)
+        })
+        
+        self.ref.child("atividades").observe(.childRemoved, with: { (snapshot) in
+            let key = snapshot.key
+            for (index, item) in self.atividades.enumerated() {
+                if item.ref!.key == key {
+                    self.atividades.remove(at: index)
+                    let indexPath = IndexPath(row: index, section: 0)
+                    self.tableView.deleteRows(at: [indexPath], with: .fade)
+                    break;
+                }
+            }
+        })
+
+        self.ref.child("atividades").observe(.childChanged, with: { (snapshot) in
+            let key = snapshot.key
+            let updatedValue = snapshot.value as! [String:Any]
+            
+            for (index, atividade) in self.atividades.enumerated() {
+                if atividade.ref!.key == key {
+                    self.atividades[index].nome = updatedValue["nome"] as? String
+                    self.atividades[index].prioridade = updatedValue["prioridade"] as? Int
+                    self.atividades[index].concluida = updatedValue["concluida"] as! Bool
+                    break;
+                }
+            }
+            
+            self.tableView.reloadData()
+        })
     }
     
     override func didReceiveMemoryWarning() {
@@ -83,7 +120,7 @@ class AtividadesTableViewController: UITableViewController {
     
     @IBAction func unwindAtividades(segue:UIStoryboardSegue) -> Void {
         
-        if(segue.identifier == "criado") {
+        if(segue.identifier == "CRIADO") {
             if let svc = segue.source as? NovaAtividadeViewController {
                
                 if let atividade = svc.atividade {

@@ -12,9 +12,9 @@ import Firebase
 import FirebaseDatabase
 
 struct Atividade {
-    let nome:String?
-    let prioridade:Int?
-    let concluida:Bool
+    var nome:String?
+    var prioridade:Int?
+    var concluida:Bool
     var ref: DatabaseReference?
     func toAnyObject() -> Any {
         return ["nome":nome!, "prioridade":prioridade!, "concluida":concluida]
