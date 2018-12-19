@@ -144,6 +144,20 @@ class AtividadesTableViewController: UITableViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "EDITAR") {
+            
+            if let dvc = segue.destination as? NovaAtividadeViewController {
+                let indexPath = self.tableView.indexPath(for: sender as! UITableViewCell)
+                let atividade = self.atividades[indexPath!.row]
+                
+                dvc.atividade = atividade
+                
+                
+            }
+        }
+    }
+    
     /*
      // Override to support conditional editing of the table view.
      override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

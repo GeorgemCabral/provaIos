@@ -128,6 +128,7 @@
                                     <outlet property="nomeAtividade" destination="9Ks-rC-1d2" id="9Zk-vE-65m"/>
                                     <outlet property="prioridade" destination="lEY-00-civ" id="zuL-8G-k06"/>
                                     <outlet property="subtituloAtividade" destination="NLf-Rm-b9l" id="tcP-nf-1QP"/>
+                                    <segue destination="7fj-Bj-NtP" kind="show" identifier="EDITAR" id="CeE-4f-BQH"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -227,4 +228,7 @@
             <point key="canvasLocation" x="2456.8000000000002" y="85.907046476761622"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="CeE-4f-BQH"/>
+    </inferredMetricsTieBreakers>
 </document>

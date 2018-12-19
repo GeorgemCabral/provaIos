@@ -32,7 +32,11 @@ class NovaAtividadeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        if let atividade = self.atividade {
+            self.nomeTextView.text = atividade.nome
+            self.prioridadeSegmentedControl.selectedSegmentIndex = atividade.prioridade!
+            self.concluidoSwitch.isOn = atividade.concluida
+        }
     }
     
     override func didReceiveMemoryWarning() {
