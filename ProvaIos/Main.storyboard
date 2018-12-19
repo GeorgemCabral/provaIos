@@ -139,7 +139,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="iWE-Wm-7VT">
                             <connections>
-                                <segue destination="7fj-Bj-NtP" kind="show" id="275-7o-Iwf"/>
+                                <segue destination="7fj-Bj-NtP" kind="show" identifier="criado" id="275-7o-Iwf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

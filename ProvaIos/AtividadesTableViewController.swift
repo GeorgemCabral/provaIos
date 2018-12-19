@@ -53,15 +53,6 @@ class AtividadesTableViewController: UITableViewController {
         return atividades.count
     }
     
-    @IBAction func unwindNovo(segue:UIStoryboardSegue){
-        
-        let svc = segue.source
-        
-        if(segue.identifier == "criado"){
-            
-        }
-    }
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Celula", for: indexPath)
         
@@ -93,15 +84,15 @@ class AtividadesTableViewController: UITableViewController {
     @IBAction func unwindAtividades(segue:UIStoryboardSegue) -> Void {
         
         if(segue.identifier == "criado") {
-            if let svc = segue.source as? TaskViewController {
+            if let svc = segue.source as? NovaAtividadeViewController {
                
-                if let atividade = svc.task {
+                if let atividade = svc.atividade {
                     let novaAtividade = Atividade(nome: atividade.nome,
                                        prioridade: atividade.prioridade,
-                                       concluido: atividade.concluido,
+                                       concluida: atividade.concluida,
                                        ref:nil)
                     
-                    self.ref.child("atividades").childByAutoId().setValue(newTask.toAnyObject())
+                    self.ref.child("atividades").childByAutoId().setValue(novaAtividade.toAnyObject())
                 }
                 
             }
